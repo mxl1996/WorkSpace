@@ -16,7 +16,7 @@ def LoginAndCheck(username, password):
     driver.find_element_by_css_selector('.login-button').click()
     time.sleep(3)
     alertText = driver.find_element_by_class_name('ant-notification-notice-description').text
-
+    print(driver.find_element_by_css_selector('.login-button').text)
     print(alertText)
     driver.quit()
     return alertText
